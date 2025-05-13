@@ -31,3 +31,26 @@ print(new_date)
 birthday = datetime.timedelta(days=5950, hours=4)
 previous_date = current_datetime - birthday
 print(previous_date)
+
+
+#Challenge
+
+file_path = "C:/Users/Student/Desktop/lesson11.2.py/txt.txt"
+import datetime
+koha_aktuale = datetime.datetime.now()
+
+print(koha_aktuale)
+
+duration = datetime.timedelta(days = 100)
+print(duration)
+
+new_date = koha_aktuale + duration
+print(new_date)
+
+old_date = datetime.timedelta(days = 100)
+previous_date = koha_aktuale - old_date
+print(previous_date)
+
+with open(file_path, "w")as file:
+    file.write((f"{new_date}"))
+    file.write((f"{old_date}"))
